@@ -31,14 +31,24 @@ body{
     background-position: top left;
     overflow: hidden;
 }
-svg {
-    position: absolute;
-    right: 3em;
-    top: 20px;
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+svg{
+    margin-top: 20px;
+    margin-right: 30px;
     cursor: pointer;
 }
 svg:hover{
     opacity: 0.7;
+}
+.settings{
+    transition: transform 0.3s ease;
+}
+.settings:hover{
+    transform: rotate(-45deg);
 }
 .tela-inicial{
     display: flex;
