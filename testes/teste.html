@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG com IA</title>
+    <link rel="stylesheet" href="teste-style.css">
+    <link rel="stylesheet" href="teste-settings.css">
+    <link rel="stylesheet" href="teste-form.css">
+</head>
+<body>
+    <header class="settings">
+        <!--ÍCONE HOME-->
+        <a class="settings_link-home" href="#">
+            <svg class="link-home_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </a>
+        <!--ÍCONE SETTINGS-->
+        <svg class="settings_icon" id="settings" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <!--FORMULÁRIO DE CONFIGURAÇÃO-->
+        <form action="" class="settings_form">
+            <!--CONFIGURAÇÕES DO PERSONAGEM-->
+            <section class="form_config-person">
+                <h2>Personalização do Personagem</h2>
+                <input type="text" name="nomePersonagem" id="nomePersonagem" class="config-person_nome" placeholder="Nome do personagem">
+                <article class="config-person_sexo">
+                    <label for="mascSex">Sexo masculino:</label>
+                    <input type="radio" name="sexo" id="mascSex" checked>
+                    <br/>
+                    <label for="femSex">Sexo feminino:</label>
+                    <input type="radio" name="sexo" id="femSex">
+                </article>
+                <hr>
+            </section>
+            <!--CONFIGURAÇÕES DE CONTEXTO-->
+            <section class="form_config-contexto">
+                <h2>Configurações de Contexto</h2>
+                <h3>Gênero do Jogo</h3>
+                <article class="config-contexto_container-generos">
+                    <div class="container-generos_genero" id="Fantasia medieval">Fantasia medieval</div>
+                    <div class="container-generos_genero" id="Apocalipse zumbi">Apocalipse zumbi</div>
+                    <div class="container-generos_genero" id="Futurista">Futurista</div>
+                    <div class="container-generos_genero" id="Mistério">Mistério</div>
+                </article>
+            </section>
+        </form>
+    </header>
+    <main class="conteudo-principal">
+        <!--TÍTULO-->
+        <!--FRASE-->
+        <!--BOTÃO-->
+    </main>
+    <script src="teste-settings.js"></script>
+    <script src="teste-configContextoGenero.js"></script>
+</body>
+</html>

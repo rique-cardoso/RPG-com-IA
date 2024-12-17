@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/*CONFIGURAÇÕES GERAIS*/
+.settings_form{
+    width: 80%;
+    margin: 80px auto;
+}
+input {
+    accent-color: #103F96;
+}
+hr{
+    border-color: #4D5256;
+}
+
+/*PERSONALIZAÇÃO DO PERSONAGEM*/
+.form_config-person{
+    text-align: left;
+}
+.config-person_nome{
+    font-size: 1em;
+    display: block;
+    margin: 25px auto;
+    padding: 8px;
+    width: 60%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+.config-person_sexo{
+    font-size: 1em;
+    display: block;
+    margin: 25px auto;
+    padding: 0 8px;
+    width: 60%;
+}
+
+/*CONFIGURAÇÕES DE CONTEXTO*/
+.form_config-contexto{
+    /* background-color: gray; */
+}
+.config-contexto_container-generos{
+    /* background-color: orange; */
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+.container-generos_genero{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #4D5256;
+    width: 200px;
+    margin: 20px 0;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity .3s ease-in;
+}
+.container-generos_genero:hover{
+    opacity: 0.8;
+}
+.container-generos_genero--selected{
+    background-color: #103F96;
+}
+.container-generos_genero--selected::before{
+    content: "✔ ";
+    color: white;
+}
+@media (max-width: 600px) {
+    .config-person_nome{
+        width: 100%;
+    }
+    .config-person_sexo{
+        width: 100%;
+    }
+    .config-contexto_container-generos{
+        width: 100%;
+        flex-direction: column;
+    }
+    .container-generos_genero:hover{
+        opacity: 1;
+    }
+}
