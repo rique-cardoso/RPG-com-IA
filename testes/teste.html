@@ -29,19 +29,30 @@
                     <label for="femSex">Sexo feminino:</label>
                     <input type="radio" name="sexo" id="femSex">
                 </article>
-                <hr>
             </section>
+            <hr>
             <!--CONFIGURAÇÕES DE CONTEXTO-->
             <section class="form_config-contexto">
                 <h2>Configurações de Contexto</h2>
                 <h3>Gênero do Jogo</h3>
                 <article class="config-contexto_container-generos">
-                    <div class="container-generos_genero" id="Fantasia medieval">Fantasia medieval</div>
-                    <div class="container-generos_genero" id="Apocalipse zumbi">Apocalipse zumbi</div>
-                    <div class="container-generos_genero" id="Futurista">Futurista</div>
-                    <div class="container-generos_genero" id="Mistério">Mistério</div>
+                    <div class="container-generos_genero" id="fantasiaMedieval">Fantasia medieval</div>
+                    <div class="container-generos_genero" id="apocalipseZumbi">Apocalipse zumbi</div>
+                    <div class="container-generos_genero" id="futurista">Futurista</div>
+                    <div class="container-generos_genero" id="misterio">Mistério</div>
+                </article>
+                <h3>Localização Inicial</h3>
+                <input type="text" name="localizacaoInicial" id="localizacaoInicial" class="config-contexto_localizacao-inicial" placeholder="Uma floresta mágica">
+                <h3>Estilo de Narrativa</h3>
+                <article class="config-contexto_container-narrativas">
+                    <div class="container-narrativas_narrativa" id="aventuraEpica">Aventura Épica</div>
+                    <div class="container-narrativas_narrativa" id="misterioInvestigacao">Mistério e Investigação</div>
+                    <div class="container-narrativas_narrativa" id="historiaSobrevivencia">História de Sobrevivência</div>
+                    <div class="container-narrativas_narrativa" id="romanceDrama">Romance e Drama</div>
                 </article>
             </section>
+            <hr>
+            <button type="submit" class="enviar-form" id="enviarForm">Salvar</button>
         </form>
     </header>
     <main class="conteudo-principal">
@@ -50,6 +61,6 @@
         <!--BOTÃO-->
     </main>
     <script src="teste-settings.js"></script>
-    <script src="teste-configContextoGenero.js"></script>
+    <script src="teste-botoesContexto.js"></script>
 </body>
 </html>

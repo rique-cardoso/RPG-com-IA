@@ -27,6 +27,7 @@
 }
 /*HEADER SETTINGS*/
 .settings{
+    overflow-y: auto;
     background-color: #303030;
     width: 60%;
     height: 100vh;

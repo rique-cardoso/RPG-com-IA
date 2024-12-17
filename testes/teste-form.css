@@ -15,7 +15,7 @@ hr{
 .form_config-person{
     text-align: left;
 }
-.config-person_nome{
+.config-person_nome, .config-contexto_localizacao-inicial{
     font-size: 1em;
     display: block;
     margin: 25px auto;
@@ -37,7 +37,7 @@ hr{
 .form_config-contexto{
     /* background-color: gray; */
 }
-.config-contexto_container-generos{
+.config-contexto_container-generos, .config-contexto_container-narrativas{
     /* background-color: orange; */
     width: 60%;
     margin: auto;
@@ -48,7 +48,7 @@ hr{
     flex-wrap: wrap;
     column-gap: 15px;
 }
-.container-generos_genero{
+.container-generos_genero, .container-narrativas_narrativa{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -61,28 +61,25 @@ hr{
     cursor: pointer;
     transition: opacity .3s ease-in;
 }
-.container-generos_genero:hover{
+.container-generos_genero:hover, .container-narrativas_narrativa:hover{
     opacity: 0.8;
 }
-.container-generos_genero--selected{
+.container-generos_genero--selected, .container-narrativas_narrativa--selected{
     background-color: #103F96;
 }
-.container-generos_genero--selected::before{
+.container-generos_genero--selected::before, .container-narrativas_narrativa--selected::before{
     content: "✔ ";
     color: white;
 }
 @media (max-width: 600px) {
-    .config-person_nome{
+    .config-person_nome, .config-contexto_localizacao-inicial, .config-person_sexo{
         width: 100%;
     }
-    .config-person_sexo{
-        width: 100%;
-    }
-    .config-contexto_container-generos{
+    .config-contexto_container-generos, .config-contexto_container-narrativas{
         width: 100%;
         flex-direction: column;
     }
-    .container-generos_genero:hover{
+    .container-generos_genero:hover, .container-narrativas_narrativa:hover{
         opacity: 1;
     }
 }
