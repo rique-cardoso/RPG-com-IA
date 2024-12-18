@@ -16,6 +16,7 @@ hr{
     text-align: left;
 }
 .config-person_nome, .config-contexto_localizacao-inicial{
+    color: #303030;
     font-size: 1em;
     display: block;
     margin: 25px auto;
@@ -34,9 +35,6 @@ hr{
 }
 
 /*CONFIGURAÇÕES DE CONTEXTO*/
-.form_config-contexto{
-    /* background-color: gray; */
-}
 .config-contexto_container-generos, .config-contexto_container-narrativas{
     /* background-color: orange; */
     width: 60%;
@@ -70,6 +68,27 @@ hr{
 .container-generos_genero--selected::before, .container-narrativas_narrativa--selected::before{
     content: "✔ ";
     color: white;
+}
+.enviar-form{
+    display: block;
+    margin: 25px auto;
+    padding: 1.3em 3em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+.enviar-form:hover{
+    background-color: #103F96;
+    color: #fff;
 }
 @media (max-width: 600px) {
     .config-person_nome, .config-contexto_localizacao-inicial, .config-person_sexo{
