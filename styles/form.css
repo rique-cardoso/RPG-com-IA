@@ -55,9 +55,12 @@ hr{
     width: 200px;
     margin: 20px 0;
     height: 40px;
+    border: none;
+    outline: none;
     border-radius: 8px;
     cursor: pointer;
     transition: opacity .3s ease-in;
+    font-size: 1.1em;
 }
 .container-generos_genero:hover, .container-narrativas_narrativa:hover{
     opacity: 0.8;
