@@ -69,7 +69,7 @@ hr{
     background-color: #103F96;
 }
 .container-generos_genero--selected::before, .container-narrativas_narrativa--selected::before{
-    content: "✔ ";
+    /* content: "✔ "; */
     color: white;
 }
 .enviar-form{

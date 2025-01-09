@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG com IA</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/settings.css">
-    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/style.css"> <!--CSS Global-->
+    <link rel="stylesheet" href="styles/settings.css"> <!--CSS do menu de configurações de contexto-->
+    <link rel="stylesheet" href="styles/form.css"> <!--CSS do formulário de contexto (que fica dentro do menu de configurações)-->
+    <link rel="stylesheet" href="styles/index.css"> <!--CSS único para esta página index.html-->
 </head>
+
 <body>
     <header class="settings">
         <!--ÍCONE HOME-->
         <a class="settings_link-home" href="#">
-            <svg class="link-home_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <svg class="link-home_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-home">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
         </a>
         <!--ÍCONE SETTINGS-->
-        <svg class="settings_icon" id="settings" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <svg class="settings_icon" id="settings" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="feather feather-settings">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+        </svg>
         <!--FORMULÁRIO DE CONFIGURAÇÃO-->
         <form action="" class="settings_form" id="settingsForm">
             <!--CONFIGURAÇÕES DO PERSONAGEM-->
             <section class="form_config-person">
                 <h2>Personalização do Personagem</h2>
-                <input type="text" name="nomePersonagem" id="nomePersonagem" class="config-person_nome" placeholder="Nome do personagem" required>
+                <input type="text" name="nomePersonagem" id="nomePersonagem" class="config-person_nome"
+                    placeholder="Nome do personagem" required>
                 <article class="config-person_sexo">
                     <label for="mascSex">Sexo masculino:</label>
                     <input type="radio" name="sexo" id="mascSex" checked value="masculino">
-                    <br/>
+                    <br />
                     <label for="femSex">Sexo feminino:</label>
                     <input type="radio" name="sexo" id="femSex" value="feminino">
                 </article>
@@ -42,7 +58,8 @@
                     <div class="container-generos_genero" id="misterio">Mistério</div>
                 </article>
                 <h3>Localização Inicial</h3>
-                <input type="text" name="localizacaoInicial" id="localizacaoInicial"  class="config-contexto_localizacao-inicial" placeholder="Uma floresta mágica">
+                <input type="text" name="localizacaoInicial" id="localizacaoInicial"
+                    class="config-contexto_localizacao-inicial" placeholder="Uma floresta mágica">
                 <h3>Estilo de Narrativa</h3>
                 <article class="config-contexto_container-narrativas">
                     <div class="container-narrativas_narrativa" id="aventuraEpica">Aventura Épica</div>
@@ -51,7 +68,8 @@
                     <div class="container-narrativas_narrativa" id="romanceDrama">Romance</div>
                 </article>
                 <h3>Objetivo inicial</h3>
-                <input type="text" name="objetivoInicial" id="objetivoInicial" class="config-contexto_localizacao-inicial" placeholder="resgatar a princesa">
+                <input type="text" name="objetivoInicial" id="objetivoInicial"
+                    class="config-contexto_localizacao-inicial" placeholder="resgatar a princesa">
             </section>
             <hr>
             <button type="submit" class="enviar-form" id="enviarForm">Salvar</button>
@@ -63,10 +81,12 @@
         <!--FRASE-->
         <p>Bem vindo ao universo de infinitas possibilidades!</p>
         <!--BOTÃO-->
-        <button class="start" id="botao1">start</button>
+        <button class="start" id="start">start</button>
     </main>
     <script src="scripts/settings.js"></script>
     <script src="scripts/botoesContexto.js"></script>
     <script src="scripts/salvarForm.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
+
 </html>
