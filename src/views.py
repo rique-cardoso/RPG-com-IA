@@ -1,13 +1,16 @@
 from main import app
 from flask import request, jsonify
-from openai_utils import consultar_chatgpt
+from gemini_utils import consultar_ia
 
-@app.route('/chat')
+@app.route('/chat', methods=['POST'])
 def chat():
     data = request.json
-    mensagem = data.get("mensagem", "")
+    mensagem = data.get("mensagem")
     if not mensagem:
-        return jonify({"erro": "Mensagem não fornecida"}), 400
+        return jsonify({"erro": "Mensagem não fornecida"}), 400
     
-    resposta = consultar_chatgpt(mensagem)
-    return jsonify({"resposta": resposta})
+    try:
+        resposta = consultar_ia(mensagem)
+        return jsonify({"resposta": resposta})
+    except Exception as e:
+        return jsonify({"erro": str(e)}), 500

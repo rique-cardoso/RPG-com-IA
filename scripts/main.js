@@ -9,6 +9,7 @@ document.querySelector('#enviarForm').addEventListener('click', e => {
 
 // botão START
 const btnStart = document.querySelector('#start')
+
 btnStart.addEventListener('click', e => {
     window.location.href = './pages/jogo.html'
 })
