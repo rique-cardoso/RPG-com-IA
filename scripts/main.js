@@ -1,10 +1,15 @@
-import { getFormData } from "./settingsHandler.js"
+import { getFormData, setData } from "./settingsHandler.js"
 
 // pegando o formulário
 document.querySelector('#enviarForm').addEventListener('click', e => {
     e.preventDefault()
-    const data = getFormData()
-    console.log(data)
+    const dataForm = getFormData()
+    if(!dataForm.nomePersonagem){
+        alert('ERRO: por favor, o nome é obrigatório!')
+    }else{
+        setData(dataForm)
+        alert('Salvo com sucesso!')
+    }
 })
 
 // botão START
