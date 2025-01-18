@@ -17,3 +17,29 @@ main > *{
     text-align: justify;
     line-height: 30px;
 }
+main .btnOpcao{
+    margin: 0 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: #4D5256;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+main .btnOpcao:hover{
+    background-color: #103F96;
+    transform: translateY(-10px);
+    box-shadow: 8px 5px 10px 5px rgba(29, 29, 29, 0.373);
+}
+@media (max-width: 600px) {
+    main .containerButtons{
+        display: flex;
+        justify-content: space-around;
+    }
+}

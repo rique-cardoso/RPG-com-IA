@@ -17,16 +17,19 @@ export function renderContext(contexto) {
 }
 export function renderButtons(){
     const main = document.querySelector('#response')
+    const nav = document.createElement('nav')
     const btn1 = document.createElement("button")
     const btn2 = document.createElement("button")
     const btn3 = document.createElement("button")
+    nav.classList.add('containerButtons')
     btn1.classList.add("btnOpcao")
     btn2.classList.add("btnOpcao")
     btn3.classList.add("btnOpcao")
     btn1.textContent = '1'
     btn2.textContent = '2'
     btn3.textContent = '3'
-    main.appendChild(btn1)
-    main.appendChild(btn2)
-    main.appendChild(btn3)
+    main.appendChild(nav)
+    nav.appendChild(btn1)
+    nav.appendChild(btn2)
+    nav.appendChild(btn3)
 }
