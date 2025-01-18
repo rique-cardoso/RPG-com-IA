@@ -1,4 +1,5 @@
 import { getData, tratarData } from "./settingsHandler.js"
+import { renderContext, renderButtons } from "./interface/renderResponse.js"
 window.addEventListener('load', e => {
     const data = getData()
     const dataTratada = tratarData(data)
@@ -12,10 +13,8 @@ window.addEventListener('load', e => {
     })
     .then(response => response.json())
         .then(data => {
-            const p = document.createElement('p')
-            p.textContent = data.resposta
-            const main = document.querySelector('#response')
-            main.appendChild(p)
+            renderContext(data.resposta)
+            renderButtons()
         })
         .catch(error => console.error('Erro:', error))
 })
