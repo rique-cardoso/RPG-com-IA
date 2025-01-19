@@ -1,6 +1,6 @@
 from main import app
 from flask import request, jsonify
-from gemini_utils import iniciar_jogo, resumir_context
+from gemini_utils import consultar_gemini
 
 # Rota de início do jogo
 @app.route('/start-game', methods=['POST'])
@@ -11,7 +11,7 @@ def startGame():
         return jsonify({"erro": "Mensagem não fornecida"}), 400
     
     try:
-        resposta = iniciar_jogo(mensagem)
+        resposta = consultar_gemini(mensagem)
         return jsonify({"resposta": resposta})
     except Exception as e:
         return jsonify({"erro": str(e)}), 500
@@ -24,7 +24,8 @@ def resume_contexto():
     if not contexto:
         return jsonify({"erro": "Contexto não fornecido"}), 400
     try:
-        resposta = resumir_context(contexto)
+        prompt = f'Resuma o máximo possível o seguinte texto: "{contexto}"'
+        resposta = consultar_gemini(prompt)
         return jsonify({"resposta": resposta})
     except Exception as e:
         return jsonify({"erro": str(e)}), 500
@@ -33,11 +34,12 @@ def resume_contexto():
 @app.route('/game-continue', methods=['POST'])
 def game_continue():
     data = request.json
-    escolha = data.get("escolha")
-    if not escolha:
-        return jsonify({"erro": "escolha não fornecida"}), 400
+    prompt = data.get("novoPrompt")
+    if not prompt:
+        return jsonify({"erro": "novoPrompt não fornecido"}), 400
     try:
-        resposta = f'ESCOLHA: {escolha}'
+        novoContexto = consultar_gemini(prompt)
+        resposta = novoContexto
         return jsonify({"resposta": resposta})
     except Exception as e:
         return jsonify({"erro": str(e)}), 500
