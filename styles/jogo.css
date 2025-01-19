@@ -24,16 +24,17 @@ main .btnOpcao{
     border-radius: 5px;
     width: 60px;
     height: 60px;
-    background-color: #4D5256;
-    color: white;
-    font-size: 1em;
+    background-color: #103F96;
+    color: #fff;
+    font-size: 1.2em;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    transition: transform .3s ease;
+    transition: transform .8s ease;
 }
 main .btnOpcao:hover{
-    background-color: #103F96;
+    color: #103F96;
+    background-color: #fff;
     transform: translateY(-10px);
     box-shadow: 8px 5px 10px 5px rgba(29, 29, 29, 0.373);
 }

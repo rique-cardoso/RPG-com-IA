@@ -14,6 +14,12 @@ export function renderContext(contexto) {
     main.appendChild(op1)
     main.appendChild(op2)
     main.appendChild(op3)
+    const objCompletContext = {
+        mainContext: contextoSplitado[0],
+        presentOpcoes: opcoes,
+        respostaCompleta: contexto
+    }
+    return objCompletContext
 }
 export function renderButtons(){
     const main = document.querySelector('#response')
