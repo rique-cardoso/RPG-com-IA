@@ -40,8 +40,9 @@ async function continuarJogo(resposta, opcEscolhida, dtTratada){
     if(contCenarios > 8){
         const fimJogo = (Math.floor(Math.random() * 2)) == 0 ? 'Game-Over: yes' : 'Game-Win: yes' 
         novoPrompt = `${comando} ${configJogo} ${regras} O que aconteceu até agora? Aqui está um resumo do último contexto que você gerou: ${contextoResumido} Aqui está a última escolha do usuário: ${escolha}, com base nessa escolha determine necessariamente um fim de jogo com ${fimJogo}, NÂO GERE NOVAS OPÇÔES. Agora explique as consequências com base na 'escolha'.`
+        console.log(`Fim de jogo: ${fimJogo}`)
     }else{
-        novoPrompt = `${comando} ${configJogo} ${regras} O que aconteceu até agora? Aqui está um resumo do último contexto que você gerou: ${contextoResumido} Aqui está a última escolha do usuário: ${escolha}, com base nessa escolha determine um game-over, game-win ou gere novas opções de escolha. Agora explique as consequências com base na 'escolha'.`
+        novoPrompt = `${comando} ${configJogo} ${regras} O que aconteceu até agora? Aqui está um resumo do último contexto que você gerou: ${contextoResumido} Aqui está a última escolha do usuário: ${escolha}, com base nessa escolha determine um game-over, game-win ou gere novas opções de escolha. Agora explique as consequências com base na 'escolha'. Atente-se ou retorna Game-Win: yes ou Game-Over: yes ou gera novas opções, ou um ou outro, se gerar game-win como yes OU se gerar Game-Over como yes -> NÃO GERAR NOVAS OPÇÕES, nesse caso retorne apenas o texto explicando as consequências da ação.`
     }
     fetch('http://127.0.0.1:5000/game-continue', {
         method: 'POST',
@@ -54,7 +55,8 @@ async function continuarJogo(resposta, opcEscolhida, dtTratada){
         .then(data => {
             contCenarios++
             renderContext(data.resposta)
-            console.log(escolha)
+            console.log(`Cenário: ${contCenarios}`)
+            console.log(`Status: ${data.status}`)
         })
         .catch(error => console.error('Erro:', error))
 }

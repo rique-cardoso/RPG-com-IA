@@ -39,7 +39,12 @@ def game_continue():
         return jsonify({"erro": "novoPrompt não fornecido"}), 400
     try:
         novoContexto = consultar_gemini(prompt)
-        resposta = novoContexto
-        return jsonify({"resposta": resposta})
+        status = 'jogando'
+        if 'game-over: yes' in novoContexto.lower():
+            status = 'perdeu'
+        if 'game-win: yes' in novoContexto.lower():
+            status = 'ganhou'
+        # resposta = novoContexto
+        return jsonify({"resposta": novoContexto, "status": status})
     except Exception as e:
         return jsonify({"erro": str(e)}), 500
