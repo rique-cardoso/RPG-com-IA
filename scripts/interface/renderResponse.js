@@ -3,7 +3,7 @@ const objCompletContext = {
     presentOpcoes: '',
     respostaCompleta: ''
 }
-export function criarElementosDom(){
+export function criarElementosDom() {
     // criação dos textos no DOM
     const main = document.querySelector('#response')
     const p = document.createElement('p')
@@ -18,7 +18,7 @@ export function criarElementosDom(){
     main.appendChild(op1)
     main.appendChild(op2)
     main.appendChild(op3)
-    
+
     // criação dos botões no DOM
     const nav = document.createElement('nav')
     const btn1 = document.createElement("button")
@@ -52,7 +52,7 @@ export function renderContext(contexto) {
     objCompletContext.presentOpcoes = opcoes
     objCompletContext.respostaCompleta = contextoSplitado
 }
-export function renderButtons(){
+export function renderButtons() {
     // const main = document.querySelector('#response')
     const btn1 = document.querySelector('#botao1')
     const btn2 = document.querySelector('#botao2')
@@ -61,6 +61,32 @@ export function renderButtons(){
     btn2.textContent = '2'
     btn3.textContent = '3'
 }
-export function retornaObjetoAtual(){
+export function retornaObjetoAtual() {
     return objCompletContext
+}
+export function renderWin() {
+    dropElements()
+    const body = document.querySelector('#bodyTelaJogando')
+    body.style.backgroundImage = "url('../../img/background-win.png')";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
+    const p = document.querySelector('#contexto')
+    p.classList.add('gameWin')
+    p.textContent = 'Você ganhou'
+}
+export function renderOver() {
+    dropElements()
+    const body = document.querySelector('#bodyTelaJogando')
+    body.style.backgroundImage = "url('../../img/background-over.png')";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "cover";
+    const p = document.querySelector('#contexto')
+    p.classList.add('gameOver')
+    p.textContent = 'Você perdeu'
+    const button = document.createElement('button')
+    // adicionar evento para recarregar a página
+}
+function dropElements(){
+    const elements = [document.querySelector('#escolha1'), document.querySelector('#escolha2'), document.querySelector('#escolha3'), document.querySelector('.containerButtons'), document.querySelector('#botao1'), document.querySelector('#botao2'), document.querySelector('#botao3')]
+    elements.forEach(e => e.remove())
 }

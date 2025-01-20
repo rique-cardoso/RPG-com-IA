@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'Debug Free Trial';
+    src: url(../fonts/DebugFreeTrial-MVdYB.otf) format('opentype');
+    font-weight: normal;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -38,9 +43,29 @@ main .btnOpcao:hover{
     transform: translateY(-10px);
     box-shadow: 8px 5px 10px 5px rgba(29, 29, 29, 0.373);
 }
+.gameWin{
+    color: #25D366;
+    font-family: "Debug Free Trial", Arial, sans-serif;
+    font-size: 6em;
+    text-align: center;
+    margin-top: 27vh;
+}
+.gameOver{
+    color: #F2275D;
+    font-family: "Debug Free Trial", Arial, sans-serif;
+    font-size: 6em;
+    text-align: center;
+    margin-top: 27vh;
+}
 @media (max-width: 600px) {
     main .containerButtons{
         display: flex;
         justify-content: space-around;
+    }
+    .gameWin{
+        font-size: 5em;
+    }
+    .gameOver{
+        font-size: 5em;
     }
 }

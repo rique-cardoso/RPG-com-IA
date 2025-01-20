@@ -1,5 +1,5 @@
 import { getData, tratarData } from "./settingsHandler.js"
-import { renderContext, renderButtons, criarElementosDom, retornaObjetoAtual } from "./interface/renderResponse.js"
+import { renderContext, renderButtons, criarElementosDom, retornaObjetoAtual, renderWin, renderOver } from "./interface/renderResponse.js"
 // var contextoAcumulado = ''
 var contCenarios = 0
 window.addEventListener('load', e => {
@@ -54,7 +54,13 @@ async function continuarJogo(resposta, opcEscolhida, dtTratada){
         .then(response => response.json())
         .then(data => {
             contCenarios++
-            renderContext(data.resposta)
+            if(data.status == 'ganhou'){
+                renderWin()
+            }else if(data.status == 'perdeu'){
+                renderOver()
+            }else{
+                renderContext(data.resposta)
+            }
             console.log(`Cenário: ${contCenarios}`)
             console.log(`Status: ${data.status}`)
         })
