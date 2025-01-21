@@ -87,3 +87,10 @@ async function resumeContexto(contexto){
     
     return contxtResumido
 }
+
+// Função para sair do jogo e apagar sessionStorage
+document.querySelector('#gameExit').addEventListener('click', e => {
+    e.preventDefault()
+    sessionStorage.clear()
+    window.location.assign('../index.html')
+})
