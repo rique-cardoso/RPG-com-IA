@@ -45,6 +45,6 @@ def game_continue():
         if 'game-win: yes' in novoContexto.lower():
             status = 'ganhou'
         # resposta = novoContexto
-        return jsonify({"resposta": novoContexto, "status": "perdeu"})
+        return jsonify({"resposta": novoContexto, "status": status})
     except Exception as e:
         return jsonify({"erro": str(e)}), 500

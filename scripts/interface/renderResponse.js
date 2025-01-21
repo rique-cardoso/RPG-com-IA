@@ -67,22 +67,24 @@ export function retornaObjetoAtual() {
 export function renderWin() {
     dropElements()
     const body = document.querySelector('#bodyTelaJogando')
+    body.style.backgroundColor = '#15773d'
     body.style.backgroundImage = "url('../../img/background-win.png')";
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundSize = "cover";
     const p = document.querySelector('#contexto')
     p.classList.add('gameWin')
-    p.textContent = 'Você ganhou'
+    p.textContent = 'You Win'
 }
 export function renderOver() {
     dropElements()
     const body = document.querySelector('#bodyTelaJogando')
+    body.style.backgroundColor = '#ba0000'
     body.style.backgroundImage = "url('../../img/background-over.png')";
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundSize = "cover";
     const p = document.querySelector('#contexto')
     p.classList.add('gameOver')
-    p.textContent = 'Você perdeu'
+    p.textContent = 'Game Over'
     const button = document.createElement('button')
     // adicionar evento para recarregar a página
 }

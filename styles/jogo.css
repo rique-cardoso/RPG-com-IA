@@ -51,7 +51,7 @@ main .btnOpcao:hover{
     margin-top: 27vh;
 }
 .gameOver{
-    color: #F2275D;
+    color: #390001;
     font-family: "Debug Free Trial", Arial, sans-serif;
     font-size: 6em;
     text-align: center;
@@ -66,6 +66,6 @@ main .btnOpcao:hover{
         font-size: 5em;
     }
     .gameOver{
-        font-size: 5em;
+        font-size: 6em;
     }
 }
