@@ -66,6 +66,7 @@ export function retornaObjetoAtual() {
 }
 export function renderWin() {
     dropElements()
+    const main = document.querySelector('#response')
     const body = document.querySelector('#bodyTelaJogando')
     body.style.backgroundColor = '#15773d'
     body.style.backgroundImage = "url('../../img/background-win.png')";
@@ -74,9 +75,18 @@ export function renderWin() {
     const p = document.querySelector('#contexto')
     p.classList.add('gameWin')
     p.textContent = 'You Win'
+    const containerTryAgain = document.createElement('nav')
+    containerTryAgain.classList.add('containerTryAgain')
+    main.appendChild(containerTryAgain)
+    const button = document.createElement('button')
+    button.classList.add('btnTryAgain')
+    button.textContent = "Reiniciar"
+    containerTryAgain.appendChild(button)
+    button.addEventListener('click', e => location.reload())
 }
 export function renderOver() {
     dropElements()
+    const main = document.querySelector('#response')
     const body = document.querySelector('#bodyTelaJogando')
     body.style.backgroundColor = '#ba0000'
     body.style.backgroundImage = "url('../../img/background-over.png')";
@@ -85,8 +95,14 @@ export function renderOver() {
     const p = document.querySelector('#contexto')
     p.classList.add('gameOver')
     p.textContent = 'Game Over'
+    const containerTryAgain = document.createElement('nav')
+    containerTryAgain.classList.add('containerTryAgain')
+    main.appendChild(containerTryAgain)
     const button = document.createElement('button')
-    // adicionar evento para recarregar a página
+    button.classList.add('btnTryAgain')
+    button.textContent = "Tentar novamente"
+    containerTryAgain.appendChild(button)
+    button.addEventListener('click', e => location.reload())
 }
 function dropElements(){
     const elements = [document.querySelector('#escolha1'), document.querySelector('#escolha2'), document.querySelector('#escolha3'), document.querySelector('.containerButtons'), document.querySelector('#botao1'), document.querySelector('#botao2'), document.querySelector('#botao3')]
