@@ -65,6 +65,7 @@ export function retornaObjetoAtual() {
     return objCompletContext
 }
 export function renderWin() {
+    criarElementosDom()
     dropElements()
     const main = document.querySelector('#response')
     const body = document.querySelector('#bodyTelaJogando')
@@ -85,6 +86,7 @@ export function renderWin() {
     button.addEventListener('click', e => location.reload())
 }
 export function renderOver() {
+    criarElementosDom()
     dropElements()
     const main = document.querySelector('#response')
     const body = document.querySelector('#bodyTelaJogando')
@@ -105,6 +107,18 @@ export function renderOver() {
     button.addEventListener('click', e => location.reload())
 }
 function dropElements(){
-    const elements = [document.querySelector('#escolha1'), document.querySelector('#escolha2'), document.querySelector('#escolha3'), document.querySelector('.containerButtons'), document.querySelector('#botao1'), document.querySelector('#botao2'), document.querySelector('#botao3')]
-    elements.forEach(e => e.remove())
+    const elements = [
+        document.querySelector('#escolha1'),
+        document.querySelector('#escolha2'),
+        document.querySelector('#escolha3'),
+        document.querySelector('.containerButtons'),
+        document.querySelector('#botao1'),
+        document.querySelector('#botao2'),
+        document.querySelector('#botao3')
+    ]
+    elements.forEach(e => {
+        if(e){ // Verifica se o elemento existe antes de tentar removê-lo
+            e.remove()
+        }
+    })
 }
