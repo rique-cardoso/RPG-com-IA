@@ -65,43 +65,76 @@ export function retornaObjetoAtual() {
     return objCompletContext
 }
 export function renderWin() {
-    criarElementosDom()
     dropElements()
-    const main = document.querySelector('#response')
+
     const body = document.querySelector('#bodyTelaJogando')
     body.style.backgroundColor = '#15773d'
     body.style.backgroundImage = "url('../../img/background-win.png')";
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundSize = "cover";
-    const p = document.querySelector('#contexto')
-    p.classList.add('gameWin')
+
+    const div = document.createElement('div')
+    div.classList.add('container')
+
+    const p = document.createElement('p')
+    p.classList.add('glitch')
+
+    const span1 = document.createElement('span')
+    span1.setAttribute('aria-hidden', 'true')
+    span1.textContent = 'You Win'
+    const span2 = document.createElement('span')
+    span2.setAttribute('aria-hidden', 'true')
+    span1.textContent = 'You Win'
+
+    body.appendChild(div)
+    div.appendChild(p)
+    p.appendChild(span1)
     p.textContent = 'You Win'
+    p.appendChild(span2)
+
     const containerTryAgain = document.createElement('nav')
     containerTryAgain.classList.add('containerTryAgain')
-    main.appendChild(containerTryAgain)
+    div.appendChild(containerTryAgain)
     const button = document.createElement('button')
     button.classList.add('btnTryAgain')
-    button.textContent = "Reiniciar"
+    button.style.color = "#15773d"
+    button.textContent = "Jogar novamente"
     containerTryAgain.appendChild(button)
     button.addEventListener('click', e => location.reload())
 }
 export function renderOver() {
-    criarElementosDom()
     dropElements()
-    const main = document.querySelector('#response')
     const body = document.querySelector('#bodyTelaJogando')
     body.style.backgroundColor = '#ba0000'
     body.style.backgroundImage = "url('../../img/background-over.png')";
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundSize = "cover";
-    const p = document.querySelector('#contexto')
-    p.classList.add('gameOver')
+
+    const div = document.createElement('div')
+    div.classList.add('container')
+    
+    const p = document.createElement('p')
+    p.classList.add('glitch')
+    
+    const span1 = document.createElement('span')
+    span1.setAttribute('aria-hidden', 'true')
+    span1.textContent = 'Game Over'
+    const span2 = document.createElement('span')
+    span2.setAttribute('aria-hidden', 'true')
+    span1.textContent = 'Game Over'
+
+    body.appendChild(div)
+    div.appendChild(p)
+    p.appendChild(span1)
     p.textContent = 'Game Over'
+    p.appendChild(span2)
+
     const containerTryAgain = document.createElement('nav')
     containerTryAgain.classList.add('containerTryAgain')
-    main.appendChild(containerTryAgain)
+    div.appendChild(containerTryAgain)
     const button = document.createElement('button')
     button.classList.add('btnTryAgain')
+    button.style.color = "rgb(120, 0, 0)"
     button.textContent = "Tentar novamente"
     containerTryAgain.appendChild(button)
     button.addEventListener('click', e => location.reload())

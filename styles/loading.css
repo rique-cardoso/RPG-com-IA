@@ -23,7 +23,7 @@ main.--activate-spinner{
 }
 @keyframes loading-spinner{
     0%{
-        stroke-dasharray: 0.01ps, 43.97px;
+        stroke-dasharray: 0.01px, 43.97px;
         transform: rotate(0);
     }
     50%{
