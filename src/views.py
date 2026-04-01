@@ -14,6 +14,9 @@ def startGame():
         resposta = consultar_gemini(mensagem)
         return jsonify({"resposta": resposta})
     except Exception as e:
+        print("\n" + "="*40)
+        print(f"ERRO FATAL NO GEMINI: {e}")
+        print("="*40 + "\n")
         return jsonify({"erro": str(e)}), 500
 
 # Rota de resumo de contexto
