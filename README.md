@@ -17,6 +17,7 @@ Com a inteligência artificial, o jogo ganhou dinamismo: é possível explorar q
 
 ## 👁️ Demonstração
 ![rpg-com-ia](https://github.com/user-attachments/assets/d41c8b5a-4661-4766-8a39-d72ef46efbbc)
+
 Repositório do projeto → [GitHub/rique-cardoso/RPG-com-IA](https://github.com/rique-cardoso/RPG-com-IA)
 
 ---
@@ -46,4 +47,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 **Henrique Prates Cardoso**
 
-[LinkedIn]([https://www.linkedin.com/in/SEU_LINK_AQUI](https://www.linkedin.com/in/henrique-cardoso-b365b1291/)) | [GitHub](https://github.com/rique-cardoso) | [E-mail](mailto:henrique.prates.br@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/henrique-cardoso-b365b1291/) | [GitHub](https://github.com/rique-cardoso) | [E-mail](mailto:henrique.prates.br@gmail.com)
