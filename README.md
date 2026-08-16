@@ -43,6 +43,47 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ---
 
+## ⚙️ Pré-requisitos
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+*   [Git](https://git-scm.com/)
+*   [Python](https://www.python.org/)
+*   JavaScript (Um navegador web moderno para rodar o front-end)
+*   Uma chave de API (Token) do [Google Gemini](https://aistudio.google.com/app/apikey)
+
+---
+
+## 🚀 Como rodar o projeto
+
+Siga as etapas abaixo para configurar e executar o projeto localmente:
+
+**1. Clone o repositório:**
+`git clone [https://github.com/rique-cardoso/RPG-com-IA.git](https://github.com/rique-cardoso/RPG-com-IA.git)`
+
+**2. Crie um ambiente virtual Python:**
+`python -m venv venv`
+
+**3. Ative o ambiente virtual:**
+
+  * No Windows: `venv\Scripts\Activate`
+  * No Linux/macOS: `source venv/bin/activate`
+
+**4. Instale as dependências:**
+`pip install -r requirements.txt`
+
+**5. Configure as variáveis de ambiente:**
+Crie um arquivo chamado `.env` dentro da pasta `src`.
+
+**6. Adicione sua chave de API:**
+Abra o arquivo `.env` criado e digite a seguinte linha (substituindo pelo seu token real):
+`GEMINI_API_KEY="Sua Chave de API aqui"`
+
+**7. Inicie o servidor:**
+`python src/main.py`
+
+*8. Acesse a aplicação:*
+Abra o arquivo `index.html` no seu navegador. Pronto, divirta-se! 🎉
+
+---
 ## 📫 Contato
 
 **Henrique Prates Cardoso**
